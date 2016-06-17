@@ -25,7 +25,7 @@ namespace BusinessLayer.Commands
 
         public void Edit(Product p)
         {
-            Product upPrd = _context.Products.Where(prd => prd.ID == p.Id).FirstOrDefault();
+            Product upPrd = _context.Products.Where(prd => prd.Id == p.Id).FirstOrDefault();
             if (upPrd != null)
             {
                 upPrd.Name = p.Name;

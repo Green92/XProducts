@@ -12,12 +12,12 @@ namespace BusinessLayer
 {
     public class BusinessManager
     {
-        private readonly Context contexte;
+        private readonly Context context;
         private static BusinessManager _businessManager = null;
 
         private BusinessManager()
         {
-            contexte = new Context();
+            context = new Context();
         }
 
         /// <summary>
@@ -35,43 +35,39 @@ namespace BusinessLayer
 
         #region Product
 
-        public List<Product> GetAllProduit()
+        public List<Product> GetAllProducts()
         {
-            ProductQuery pq = new ProductQuery(contexte);
+            ProductQuery pq = new ProductQuery(context);
             return pq.GetAll().ToList();
         }
 
-        public int AjouterProduit(Product p)
+        public int AddProduct(Product p)
         {
             // TODO : ajouter des contrôles sur le produit (exemple : vérification de champ, etc.)
-            ProductCommand pc = new ProductCommand(contexte);
+            ProductCommand pc = new ProductCommand(context);
             return pc.Add(p);
         }
 
-        public void ModifierProduit(Product p)
+        public void EditProduct(Product p)
         {
             // TODO : ajouter des contrôles sur le produit (exemple : vérification de champ, etc.)
-            ProductCommand pc = new ProductCommand(contexte);
+            ProductCommand pc = new ProductCommand(context);
             pc.Edit(p);
         }
 
-        public void SupprimerProduit(int produitID)
+        public void DeleteProduct(int productId)
         {
-            ProductCommand pc = new ProductCommand(contexte);
-            pc.Delete(produitID);
+            ProductCommand pc = new ProductCommand(context);
+            pc.Delete(productId);
         }
 
         #endregion
 
         #region Category
 
-        /// <summary>
-        /// Récupérer une liste de catégories en base
-        /// </summary>
-        /// <returns>Liste de Categorie</returns>
-        public List<Category> GetAllCategorie()
+        public List<Category> GetAllCategories()
         {
-            CategoryQuery pq = new CategoryQuery(contexte);
+            CategoryQuery pq = new CategoryQuery(context);
             return pq.GetAll().ToList();
         }
 
