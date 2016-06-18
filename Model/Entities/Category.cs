@@ -11,5 +11,10 @@ namespace Model.Entities
         public int Id { get; set; }
         public string Wording { get; set; }
         public virtual ICollection<Product> Products { get; set; }
+
+        public override string ToString()
+        {
+            return Wording;
+        }
     }
 }
