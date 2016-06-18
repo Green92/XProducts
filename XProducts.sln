@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{EA0F705C-D302-46BC-B249-2CE0B0943901}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XProductsModel", "XProductsModel\XProductsModel.csproj", "{97AB1512-BFC0-4620-B854-FA1873BFBF1F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XProductsWeb", "XProductsWeb\XProductsWeb.csproj", "{8ECDF038-3721-494E-B394-CC152E343539}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfFrontend", "..\..\XProducts\WpfFrontend\WpfFrontend.csproj", "{F4C7DF75-D803-458E-B4EC-29428B91F984}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8ECDF038-3721-494E-B394-CC152E343539}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ECDF038-3721-494E-B394-CC152E343539}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ECDF038-3721-494E-B394-CC152E343539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4C7DF75-D803-458E-B4EC-29428B91F984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4C7DF75-D803-458E-B4EC-29428B91F984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4C7DF75-D803-458E-B4EC-29428B91F984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4C7DF75-D803-458E-B4EC-29428B91F984}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
