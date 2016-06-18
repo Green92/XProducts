@@ -41,6 +41,34 @@ namespace BusinessLayer
             return pq.GetAll().ToList();
         }
 
+        public Product GetProductById(int id)
+        {
+            ProductQuery pc = new ProductQuery(context);
+            
+            return pc.GetById(id).FirstOrDefault();
+        }
+
+        public List<Product> GetProductsByCategoryId(int id)
+        {
+            ProductQuery pc = new ProductQuery(context);
+
+            return pc.GetByCategoryId(id).ToList();
+        }
+
+        public List<Product> GetProductsByCategoryIdAndName(int id, String name)
+        {
+            ProductQuery pc = new ProductQuery(context);
+
+            return pc.GetByCategoryIdAndName(id, name).ToList();
+        }
+
+        public List<Product> GetProductsByName(String name)
+        {
+            ProductQuery pc = new ProductQuery(context);
+
+            return pc.GetByName(name).ToList();
+        }
+
         public int AddProduct(Product p)
         {
             // TODO : ajouter des contrôles sur le produit (exemple : vérification de champ, etc.)
@@ -69,6 +97,13 @@ namespace BusinessLayer
         {
             CategoryQuery pq = new CategoryQuery(context);
             return pq.GetAll().ToList();
+        }
+
+        public Category GetCategoryById(int id)
+        {
+            CategoryQuery pc = new CategoryQuery(context);
+
+            return pc.GetById(id).FirstOrDefault();
         }
 
         #endregion
