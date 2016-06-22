@@ -32,16 +32,16 @@ namespace XProductsModel
 
                 List<Product> products = bm.GetAllProducts();
                 System.Console.WriteLine("---- LISTE DES PRODUITS -----");
-                foreach (Product c in products)
+                foreach (Product p in products)
                 {
-                    System.Console.WriteLine("Catégorie ID {0} : {1}", c.Id, c.Name);
+                    System.Console.WriteLine("Catégorie ID {0} : {1}", p.CategoryId, p.Name);
                 }
             } catch (Exception e)
             {
 
             }
 
-            
+            Console.ReadKey();
         }
     }
 }

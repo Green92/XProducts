@@ -30,6 +30,10 @@ namespace BusinessLayer.Commands
             {
                 upPrd.Name = p.Name;
                 upPrd.CategoryId = p.CategoryId;
+                upPrd.Description = p.Description;
+                upPrd.Price = p.Price;
+                upPrd.Stock = p.Stock;
+                upPrd.Active = p.Active;
             }
             _context.SaveChanges();
         }

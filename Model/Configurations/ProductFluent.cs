@@ -18,6 +18,10 @@ namespace Model.Configurations
 
             Property(p => p.Id).HasColumnName("PRD_ID").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(p => p.Name).HasColumnName("PRD_NAME").IsRequired().HasMaxLength(100);
+            Property(p => p.Description).HasColumnName("PRD_DESCRIPTION").HasMaxLength(2048);
+            Property(p => p.Active).HasColumnName("PRD_ACTIVE");
+            Property(p => p.Stock).HasColumnName("PRD_STOCK").IsRequired();
+            Property(p => p.Price).HasColumnName("PRD_PRICE").IsRequired();
 
             HasRequired(p => p.Category).WithMany(c => c.Products).HasForeignKey(p => p.CategoryId);
         }

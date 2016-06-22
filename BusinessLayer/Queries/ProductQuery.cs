@@ -26,5 +26,20 @@ namespace BusinessLayer.Queries
         {
             return _context.Products.Where(p => p.Id == id);
         }
+
+        public IQueryable<Product> GetByCategoryId(int id)
+        {
+            return _context.Products.Where(p => p.CategoryId == id);
+        }
+
+        public IQueryable<Product> GetByCategoryIdAndName(int id, String name)
+        {
+            return _context.Products.Where(p => p.CategoryId == id && p.Name.Contains(name));
+        }
+
+        public IQueryable<Product> GetByName(String name)
+        {
+            return _context.Products.Where(p => p.Name.Contains(name));
+        }
     }
 }

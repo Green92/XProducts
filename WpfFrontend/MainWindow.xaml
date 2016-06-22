@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfFrontend.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:WpfFrontend.View"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <ListView Grid.Column="0" ItemsSource="{Binding Produits, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding ProduitSelection, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+
+        <my:Produit Grid.Column="1" DataContext="{Binding ProduitSelection, UpdateSourceTrigger=PropertyChanged}" />
+    </Grid>
+</Window>
