@@ -58,22 +58,34 @@ namespace XProductsWeb.Controllers
         // GET: Product/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            ProductEditViewModel model = new ProductEditViewModel();
+            model.Product = bm.GetProductById(id);
+            model.Categories = bm.GetAllCategories();
+
+            return View(model);
         }
 
         // POST: Product/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, ProductEditViewModel model)
         {
             try
             {
-                // TODO: Add update logic here
+                model.Categories = bm.GetAllCategories();
+
+                if (model == null || !ModelState.IsValid )
+                {
+                    return View(model);
+                }
+
+                model.Product.Category = bm.GetCategoryById(model.Product.CategoryId);
+                bm.EditProduct(model.Product);
 
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return View(model);
             }
         }
 
