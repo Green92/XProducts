@@ -65,10 +65,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configurations\CategoryFluent.cs" />
+    <Compile Include="Configurations\ClientFluent.cs" />
+    <Compile Include="Configurations\CommandFluent.cs" />
+    <Compile Include="Configurations\CommandProductFluent.cs" />
     <Compile Include="Configurations\ProductFluent.cs" />
+    <Compile Include="Configurations\StatusFluent.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Client.cs" />
+    <Compile Include="Entities\Command.cs" />
+    <Compile Include="Entities\CommandProduct.cs" />
+    <Compile Include="Entities\LogProduct.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Status.cs" />
     <Compile Include="Initialisation\ContextInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

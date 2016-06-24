@@ -19,5 +19,7 @@ namespace Model.Entities
 
         public int ClientId { get; set;  }
         public Client Client { get; set;  }
+
+        public ICollection<CommandProduct> CommandProducts { get; set; }
     }
 }
