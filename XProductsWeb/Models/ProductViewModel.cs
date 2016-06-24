@@ -36,18 +36,5 @@ namespace XProductsWeb.Models
                 return new SelectList(categories, "Id", "Wording");
             }
         }
-
-        //public int SelectedCategoryId
-        //{
-        //    get {
-        //        int result = 0;
-        //        if (SelectedCategory != null)
-        //        {
-        //            int.TryParse(SelectedCategory.Value, out result);
-        //        }
-
-        //        return result;
-        //    }
-        //}
     }
 }

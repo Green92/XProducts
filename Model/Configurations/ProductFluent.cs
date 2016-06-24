@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Infrastructure.Annotations;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace Model.Configurations
             Property(p => p.Active).HasColumnName("PRD_ACTIVE");
             Property(p => p.Stock).HasColumnName("PRD_STOCK").IsRequired();
             Property(p => p.Price).HasColumnName("PRD_PRICE").IsRequired();
+            Property(p => p.Code).HasColumnName("PRD_CODE").IsRequired().HasMaxLength(100)
+                .HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute()));
 
             HasRequired(p => p.Category).WithMany(c => c.Products).HasForeignKey(p => p.CategoryId);
         }

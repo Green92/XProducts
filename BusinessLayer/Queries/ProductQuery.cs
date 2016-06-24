@@ -34,12 +34,14 @@ namespace BusinessLayer.Queries
 
         public IQueryable<Product> GetByCategoryIdAndName(int id, String name)
         {
-            return _context.Products.Where(p => p.CategoryId == id && p.Name.Contains(name));
+            return _context.Products.Where(
+                p => p.CategoryId == id && (p.Name.Contains(name)
+                || p.Code.Contains(name)));
         }
 
         public IQueryable<Product> GetByName(String name)
         {
-            return _context.Products.Where(p => p.Name.Contains(name));
+            return _context.Products.Where(p => (p.Name.Contains(name) || p.Code.Contains(name)));
         }
     }
 }

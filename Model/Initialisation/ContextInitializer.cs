@@ -25,61 +25,61 @@ namespace Model.Initialisation
             defaultProducts.Add(new Product() {
                 Name = "Steak",
                 Category = boucherie,
-                CategoryId = boucherie.Id,
                 Active = true,
                 Description = "cgcggcgcgc gcgc gc fgvcgc gc ",
                 Stock = 10,
-                Price = 20
+                Price = 20,
+                Code = "REGDYT"
             });
 
             defaultProducts.Add(new Product() {
                 Name = "Jambon",
                 Category = boucherie,
-                CategoryId = boucherie.Id,
                 Active = true,
                 Description = "",
                 Stock = 10,
-                Price = 20
+                Price = 20,
+                Code = "REGDY3"
             });
 
             defaultProducts.Add(new Product() {
                 Name = "Yaourts",
                 Category = laitiers,
-                CategoryId = laitiers.Id,
                 Active = true,
                 Description = "",
                 Stock = 10,
-                Price = 20
+                Price = 20,
+                Code = "REGfsdfT"
             });
 
             defaultProducts.Add(new Product() {
                 Name = "Glace",
                 Category = laitiers,
-                CategoryId = laitiers.Id,
                 Active = true,
                 Description = "",
                 Stock = 10,
-                Price = 20
+                Price = 20,
+                Code = "HJGQJSDF"
             });
 
             defaultProducts.Add(new Product() {
                 Name = "Coca Cola",
                 Category = liquides,
-                CategoryId = liquides.Id,
                 Active = true,
                 Description = "",
                 Stock = 10,
-                Price = 20
+                Price = 20,
+                Code = "qdfsdfsd"
             });
 
             defaultProducts.Add(new Product() {
                 Name = "Captain Morgan",
                 Category = liquides,
-                CategoryId = liquides.Id,
                 Active = true,
                 Description = "",
                 Stock = 10,
-                Price = 20
+                Price = 20,
+                Code = "ertfdgdfgh"
             });
 
             foreach (Product p in defaultProducts)
