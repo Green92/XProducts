@@ -34,6 +34,16 @@ namespace BusinessLayer
             }
         }
 
+        public Command GetCommand(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Command> GetAllCommands()
+        {
+            throw new NotImplementedException();
+        }
+
         #region Product
 
         public List<Product> GetAllProducts()

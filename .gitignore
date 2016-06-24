@@ -2,3 +2,8 @@
 packages
 Model/bin
 Model/obj
+bin
+*/obj
+*/bin
+*/Bin
+*.csproj.user
