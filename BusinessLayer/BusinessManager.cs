@@ -34,15 +34,27 @@ namespace BusinessLayer
             }
         }
 
+        #region Command
+
         public Command GetCommand(int id)
         {
-            throw new NotImplementedException();
+            CommandQuery cq = new CommandQuery(context);
+            return cq.GetById(id).FirstOrDefault();
         }
 
         public List<Command> GetAllCommands()
         {
-            throw new NotImplementedException();
+            CommandQuery cq = new CommandQuery(context);
+            return cq.GetAll().ToList();
         }
+
+        public int AddCommand(Command c)
+        {
+            CommandCommand cc = new CommandCommand(context);
+            return cc.Add(c);
+        }
+
+        #endregion
 
         #region Product
 
@@ -82,14 +94,12 @@ namespace BusinessLayer
 
         public int AddProduct(Product p)
         {
-            // TODO : ajouter des contrôles sur le produit (exemple : vérification de champ, etc.)
             ProductCommand pc = new ProductCommand(context);
             return pc.Add(p);
         }
 
         public void EditProduct(Product p)
         {
-            // TODO : ajouter des contrôles sur le produit (exemple : vérification de champ, etc.)
             ProductCommand pc = new ProductCommand(context);
             pc.Edit(p);
         }

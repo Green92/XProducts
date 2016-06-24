@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Model.Initialisation
 {
-    public class ContextInitializer : DropCreateDatabaseIfModelChanges<Context>
+    public class ContextInitializer : DropCreateDatabaseAlways<Context>
     {
         protected override void Seed(Context context)
         {
