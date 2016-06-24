@@ -29,5 +29,15 @@ namespace Model
         public DbSet<Product> Products { get; set; }
 
         public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Command> Commands { get; set; }
+
+        public DbSet<Client> Clients { get; set; }
+
+        public DbSet<LogProduct> LogProducts { get; set; }
+
+        public DbSet<Status> Status { get; set; }
+
+        public DbSet<CommandProduct> CommandProducts { get; set; }
     }
 }

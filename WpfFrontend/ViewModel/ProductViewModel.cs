@@ -26,7 +26,7 @@ namespace WpfFrontend.ViewModel
 
         public int Stock { get; set; }
 
-        public int Prix { get; set; }
+        public double Prix { get; set; }
 
         public Category Category { get; set; }
 
@@ -37,6 +37,11 @@ namespace WpfFrontend.ViewModel
             Id = product.Id;
             Category = product.Category;
             Libelle = product.Name;
+            Stock = product.Stock;
+            Code = product.Code;
+            Prix = product.Price;
+            Actif = product.Active;
+            Description = product.Description;
         }
 
         public ICommand PersistOperation
@@ -58,7 +63,12 @@ namespace WpfFrontend.ViewModel
                 Product product = new Product();
                 product.Category = Category;
                 product.Id = Id;
+                product.Code = Code;
                 product.Name = Libelle;
+                product.Stock = Stock;
+                product.Price = Prix;
+                product.Description = Description;
+                product.Active = Actif;
 
                 BusinessManager.Instance.EditProduct(product);
             } catch (Exception e)

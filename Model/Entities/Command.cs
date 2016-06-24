@@ -18,8 +18,8 @@ namespace Model.Entities
         public Status Status { get; set; }
 
         public int ClientId { get; set;  }
-        public Client Client { get; set;  }
+        public virtual Client Client { get; set;  }
 
-        public ICollection<CommandProduct> CommandProducts { get; set; }
+        public virtual ICollection<CommandProduct> CommandProducts { get; set; }
     }
 }

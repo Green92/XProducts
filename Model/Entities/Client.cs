@@ -12,7 +12,7 @@ namespace Model.Entities
 
         public bool Actif { get; set;  }
 
-        public ICollection<Command> Commands { get; set; }
+        public virtual ICollection<Command> Commands { get; set; }
 
         public Client()
         {

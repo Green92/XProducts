@@ -45,6 +45,7 @@ namespace WpfFrontend.ViewModel
 
              foreach (Product p in BusinessManager.Instance.GetAllProducts())
              {
+                Console.WriteLine(p.Category);
                  _produits.Add(new ProductViewModel(p));
              }
         }

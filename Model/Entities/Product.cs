@@ -20,11 +20,13 @@ namespace Model.Entities
 
         public double Price { get; set; }
 
+        public string Code { get; set; }
+
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
-        public ICollection<CommandProduct> CommandProducts { get; set; }
+        public virtual ICollection<CommandProduct> CommandProducts { get; set; }
 
-        public ICollection<LogProduct> LogProducts { get; set; }
+        public virtual ICollection<LogProduct> LogProducts { get; set; }
     }
 }
