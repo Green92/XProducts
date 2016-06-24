@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XProductsModel", "XProducts
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XProductsWeb", "XProductsWeb\XProductsWeb.csproj", "{8ECDF038-3721-494E-B394-CC152E343539}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfFrontend", "..\..\XProducts\WpfFrontend\WpfFrontend.csproj", "{F4C7DF75-D803-458E-B4EC-29428B91F984}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfFrontend", "WpfFrontend\WpfFrontend.csproj", "{F4C7DF75-D803-458E-B4EC-29428B91F984}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

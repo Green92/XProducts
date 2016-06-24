@@ -38,7 +38,7 @@ namespace XProductsModel
                 }
             } catch (Exception e)
             {
-
+                Console.WriteLine(String.Format("Erreur : {0}", e.Message));
             }
 
             Console.ReadKey();

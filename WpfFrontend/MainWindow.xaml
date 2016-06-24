@@ -9,7 +9,13 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <ListView Grid.Column="0" ItemsSource="{Binding Produits, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding ProduitSelection, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+        <ListView Grid.Column="0" ItemsSource="{Binding Produits, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding ProduitSelection, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{ Binding Libelle }"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
         <my:Produit Grid.Column="1" DataContext="{Binding ProduitSelection, UpdateSourceTrigger=PropertyChanged}" />
     </Grid>

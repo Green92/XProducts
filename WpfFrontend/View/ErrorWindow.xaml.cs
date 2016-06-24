@@ -10,18 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfFrontend.ViewModel;
 
 namespace WpfFrontend.View
 {
     /// <summary>
-    /// Logique d'interaction pour ListeProduit.xaml
+    /// Logique d'interaction pour Error.xaml
     /// </summary>
-    public partial class Produit : UserControl
+    public partial class ErrorWindow : Window
     {
-        public Produit()
+        public ErrorWindow()
         {
             InitializeComponent();
         }
