@@ -50,8 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessManager.cs" />
+    <Compile Include="Commands\CommandCommand.cs" />
     <Compile Include="Commands\ProductCommand.cs" />
     <Compile Include="Queries\CategoryQuery.cs" />
+    <Compile Include="Queries\CommandQuery.cs" />
     <Compile Include="Queries\ProductQuery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
