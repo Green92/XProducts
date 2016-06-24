@@ -24,5 +24,7 @@ namespace Model.Entities
         public Category Category { get; set; }
 
         public ICollection<CommandProduct> CommandProducts { get; set; }
+
+        public ICollection<LogProduct> LogProducts { get; set; }
     }
 }
