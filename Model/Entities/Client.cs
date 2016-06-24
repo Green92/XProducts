@@ -13,5 +13,10 @@ namespace Model.Entities
         public bool Actif { get; set;  }
 
         public ICollection<Command> Commands { get; set; }
+
+        public Client()
+        {
+            Actif = true;
+        }
     }
 }
