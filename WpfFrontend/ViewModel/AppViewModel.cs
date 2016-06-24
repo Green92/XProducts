@@ -13,9 +13,11 @@ namespace WpfFrontend.ViewModel
 {
     public class AppViewModel : BaseViewModel
     {
-        private ObservableCollection<ProduitViewModel> _produits = null;
+        private ObservableCollection<ProductViewModel> _produits = null;
 
-        public ObservableCollection<ProduitViewModel> Produits
+        private ProductViewModel _selectedProduit = null;
+
+        public ObservableCollection<ProductViewModel> Produits
         {
             get { return _produits; }
             set
@@ -25,15 +27,25 @@ namespace WpfFrontend.ViewModel
             }
         }
 
-        public ProduitViewModel ProduitSelection { get; set; }
+        public ProductViewModel ProduitSelection {
+            get
+            {
+                return _selectedProduit;
+            }
+            set
+            {
+                _selectedProduit = value;
+                OnPropertyChanged("ProduitSelection");
+            }
+        }
 
         public AppViewModel()
         {
-            _produits = new ObservableCollection<ProduitViewModel>();
+            _produits = new ObservableCollection<ProductViewModel>();
 
              foreach (Product p in BusinessManager.Instance.GetAllProducts())
              {
-                 _produits.Add(new ProduitViewModel(p));
+                 _produits.Add(new ProductViewModel(p));
              }
         }
     }

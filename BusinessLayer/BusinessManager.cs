@@ -17,6 +17,7 @@ namespace BusinessLayer
 
         private BusinessManager()
         {
+            AppDomain.CurrentDomain.SetData("DataDirectory", AppDomain.CurrentDomain.BaseDirectory);
             context = new Context();
         }
 
