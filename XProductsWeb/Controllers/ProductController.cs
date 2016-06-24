@@ -14,7 +14,7 @@ namespace XProductsWeb.Controllers
         private BusinessManager bm = BusinessManager.Instance;
 
         // GET: Product
-        public ActionResult Index(Models.ProductViewModel model)
+        public ActionResult Index(ProductViewModel model)
         {
             model.Categories = bm.GetAllCategories();
             model.Products = bm.GetAllProducts();
@@ -67,22 +67,33 @@ namespace XProductsWeb.Controllers
         // GET: Product/Create
         public ActionResult Create()
         {
-            return View();
+            ProductEditViewModel model = new ProductEditViewModel();
+            model.Categories = bm.GetAllCategories();
+
+            return View(model);
         }
 
         // POST: Product/Create
         [HttpPost]
-        public ActionResult Create(Models.ProductViewModel model)
+        public ActionResult Create(ProductEditViewModel model)
         {
             try
             {
-                // TODO: Add insert logic here
+                model.Categories = bm.GetAllCategories();
+
+                if (model == null || !ModelState.IsValid)
+                {
+                    return View(model);
+                }
+
+                model.Product.Category = bm.GetCategoryById(model.Product.CategoryId);
+                bm.AddProduct(model.Product);
 
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception e)
             {
-                return View();
+                return View(model);
             }
         }
 
@@ -123,16 +134,19 @@ namespace XProductsWeb.Controllers
         // GET: Product/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            ProductDetailsViewModel model = new ProductDetailsViewModel();
+            model.Product = bm.GetProductById(id);
+
+            return View(model);
         }
 
         // POST: Product/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, ProductDetailsViewModel model)
         {
             try
             {
-                // TODO: Add delete logic here
+                bm.DeleteProduct(model.Product.Id);
 
                 return RedirectToAction("Index");
             }

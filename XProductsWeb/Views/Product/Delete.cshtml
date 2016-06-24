@@ -1,0 +1,22 @@
+﻿@model XProductsWeb.Models.ProductDetailsViewModel
+
+@{
+    ViewBag.Title = "Delete a product";
+}
+
+<h2>Delete</h2>
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>@Html.DisplayFor(model => Model.Product.Name)</h3>
+        @using (Html.BeginForm("Delete", "Product", FormMethod.Post, new { role = "form" }))
+        {
+            @Html.HiddenFor(model => Model.Product.Id)
+
+            <span class="clearfix">
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+                <button type="submit" class="btn btn-danger pull-right">Delete</button>
+            </span>
+        }
+    </div>
+</div>

@@ -20,6 +20,7 @@
 
         <div class="pull-right">
             <div class="clearfix">
+                @Html.ActionLink("Delete", "Delete", new { id = Model.Product.Id }, new { @class = "btn btn-danger" })
                 @Html.ActionLink("Edit", "Edit", new { id = Model.Product.Id }, new { @class = "btn btn-default" })
                 @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
             </div>
