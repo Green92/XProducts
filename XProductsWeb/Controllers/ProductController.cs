@@ -23,6 +23,37 @@ namespace XProductsWeb.Controllers
             return View(model);
         }
 
+        public ActionResult GetProducts(string categoryId, string searchText)
+        {
+            ProductViewModel model = new ProductViewModel();
+            int id = int.Parse(categoryId);
+
+            bool category = id != 0;
+            bool search = searchText != null;
+
+            if (!category && !search)
+            {
+                model.Products = getAllProducts();
+            }
+            else
+            {
+                if (category && search)
+                {
+                    model.Products = bm.GetProductsByCategoryIdAndName(id, searchText);
+                }
+                else if (category)
+                {
+                    model.Products = bm.GetProductsByCategoryId(id);
+                }
+                else if (search)
+                {
+                    model.Products = bm.GetProductsByName(searchText);
+                }
+            }
+            
+            return PartialView("PartialProduct", model);
+        }
+
         // GET: Product/Details/5
         public ActionResult Details(int id)
         {
@@ -83,7 +114,7 @@ namespace XProductsWeb.Controllers
 
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception e)
             {
                 return View(model);
             }
@@ -109,37 +140,6 @@ namespace XProductsWeb.Controllers
             {
                 return View();
             }
-        }
-
-        [HttpPost]
-        public ActionResult Search(ProductViewModel model)
-        {
-            model.Categories = bm.GetAllCategories();
-
-            bool category = model.SelectedCategory != 0;
-            bool search = model.Search != null;
-
-            if (!category && !search)
-            {
-                model.Products = getAllProducts();
-            }
-            else
-            {
-                if (category && search)
-                {
-                    model.Products = bm.GetProductsByCategoryIdAndName(model.SelectedCategory, model.Search);                    
-                }
-                else if (category)
-                {
-                    model.Products = bm.GetProductsByCategoryId(model.SelectedCategory);
-                }
-                else if (search)
-                {
-                    model.Products = bm.GetProductsByName(model.Search);
-                }
-            } 
-
-            return View("Index", model);
         }
 
         private List<Product> getAllProducts()

@@ -40,8 +40,6 @@ namespace XProductsModel
             {
                 Console.WriteLine(String.Format("Erreur : {0}", e.Message));
             }
-
-            Console.ReadKey();
         }
     }
 }

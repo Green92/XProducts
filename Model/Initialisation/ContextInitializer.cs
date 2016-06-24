@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Model.Initialisation
 {
-    public class ContextInitializer : DropCreateDatabaseAlways<Context>
+    public class ContextInitializer : DropCreateDatabaseIfModelChanges<Context>
     {
         protected override void Seed(Context context)
         {
@@ -25,7 +25,6 @@ namespace Model.Initialisation
             defaultProducts.Add(new Product() {
                 Name = "Steak",
                 Category = boucherie,
-                CategoryId = boucherie.Id,
                 Active = true,
                 Description = "cgcggcgcgc gcgc gc fgvcgc gc ",
                 Stock = 10,
@@ -36,7 +35,6 @@ namespace Model.Initialisation
             defaultProducts.Add(new Product() {
                 Name = "Jambon",
                 Category = boucherie,
-                CategoryId = boucherie.Id,
                 Active = true,
                 Description = "",
                 Stock = 10,
@@ -47,7 +45,6 @@ namespace Model.Initialisation
             defaultProducts.Add(new Product() {
                 Name = "Yaourts",
                 Category = laitiers,
-                CategoryId = laitiers.Id,
                 Active = true,
                 Description = "",
                 Stock = 10,
@@ -58,7 +55,6 @@ namespace Model.Initialisation
             defaultProducts.Add(new Product() {
                 Name = "Glace",
                 Category = laitiers,
-                CategoryId = laitiers.Id,
                 Active = true,
                 Description = "",
                 Stock = 10,
@@ -69,7 +65,6 @@ namespace Model.Initialisation
             defaultProducts.Add(new Product() {
                 Name = "Coca Cola",
                 Category = liquides,
-                CategoryId = liquides.Id,
                 Active = true,
                 Description = "",
                 Stock = 10,
@@ -80,7 +75,6 @@ namespace Model.Initialisation
             defaultProducts.Add(new Product() {
                 Name = "Captain Morgan",
                 Category = liquides,
-                CategoryId = liquides.Id,
                 Active = true,
                 Description = "",
                 Stock = 10,
