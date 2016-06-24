@@ -29,11 +29,13 @@ namespace BusinessLayer.Commands
             if (upPrd != null)
             {
                 upPrd.Name = p.Name;
+                upPrd.Category = p.Category;
                 upPrd.CategoryId = p.CategoryId;
                 upPrd.Description = p.Description;
                 upPrd.Price = p.Price;
                 upPrd.Stock = p.Stock;
                 upPrd.Active = p.Active;
+                upPrd.Code = p.Code;
             }
             _context.SaveChanges();
         }

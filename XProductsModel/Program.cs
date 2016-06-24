@@ -24,9 +24,9 @@ namespace XProductsModel
                 }
 
                 Product product = new Product();
-                product.Id = 1;
                 product.Name = "Test";
                 product.Category = categories.FirstOrDefault();
+                product.Code = "gqsjhdgqs";
 
                 bm.AddProduct(product);
 
@@ -34,7 +34,7 @@ namespace XProductsModel
                 System.Console.WriteLine("---- LISTE DES PRODUITS -----");
                 foreach (Product p in products)
                 {
-                    System.Console.WriteLine("Catégorie ID {0} : {1}", p.CategoryId, p.Name);
+                    System.Console.WriteLine("Catégorie {0} : {1}", p.Category, p.Name);
                 }
             } catch (Exception e)
             {

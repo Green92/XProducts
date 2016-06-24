@@ -11,10 +11,10 @@ namespace Model.Entities
         public int Quantity { get; set; }
 
         public int CommandId { get; set; }
-        public Command Command { get; set; }
+        public virtual Command Command { get; set; }
 
         public int ProductId { get; set;  }
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
 
         public CommandProduct()
         {

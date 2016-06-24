@@ -29,7 +29,8 @@ namespace Model.Initialisation
                 Active = true,
                 Description = "cgcggcgcgc gcgc gc fgvcgc gc ",
                 Stock = 10,
-                Price = 20
+                Price = 20,
+                Code = "REGDYT"
             });
 
             defaultProducts.Add(new Product() {
@@ -39,7 +40,8 @@ namespace Model.Initialisation
                 Active = true,
                 Description = "",
                 Stock = 10,
-                Price = 20
+                Price = 20,
+                Code = "REGDY3"
             });
 
             defaultProducts.Add(new Product() {
@@ -49,7 +51,8 @@ namespace Model.Initialisation
                 Active = true,
                 Description = "",
                 Stock = 10,
-                Price = 20
+                Price = 20,
+                Code = "REGfsdfT"
             });
 
             defaultProducts.Add(new Product() {
@@ -59,7 +62,8 @@ namespace Model.Initialisation
                 Active = true,
                 Description = "",
                 Stock = 10,
-                Price = 20
+                Price = 20,
+                Code = "HJGQJSDF"
             });
 
             defaultProducts.Add(new Product() {
@@ -69,7 +73,8 @@ namespace Model.Initialisation
                 Active = true,
                 Description = "",
                 Stock = 10,
-                Price = 20
+                Price = 20,
+                Code = "qdfsdfsd"
             });
 
             defaultProducts.Add(new Product() {
@@ -79,7 +84,8 @@ namespace Model.Initialisation
                 Active = true,
                 Description = "",
                 Stock = 10,
-                Price = 20
+                Price = 20,
+                Code = "ertfdgdfgh"
             });
 
             foreach (Product p in defaultProducts)

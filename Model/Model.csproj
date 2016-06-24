@@ -68,6 +68,7 @@
     <Compile Include="Configurations\ClientFluent.cs" />
     <Compile Include="Configurations\CommandFluent.cs" />
     <Compile Include="Configurations\CommandProductFluent.cs" />
+    <Compile Include="Configurations\LogProductFluent.cs" />
     <Compile Include="Configurations\ProductFluent.cs" />
     <Compile Include="Configurations\StatusFluent.cs" />
     <Compile Include="Context.cs" />
